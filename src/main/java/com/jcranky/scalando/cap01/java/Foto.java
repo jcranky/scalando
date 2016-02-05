@@ -1,4 +1,4 @@
-package com.jcranky.scalando.cap01;
+package com.jcranky.scalando.cap01.java;
 
 public class Foto {
     private final String id;
