@@ -18,4 +18,10 @@ class FlickrCaller {
     // algoritmo (complexo?) de acesso ao Flickr aqui
     return ???
   }
+
+  // com 'return' mas sem tipo de retorno, não compila
+  //  def buscaFotosReturnBroken(tag: String) = {
+  //     algoritmo (complexo?) de acesso ao Flickr aqui
+  //    return ???
+  //  }
 }
