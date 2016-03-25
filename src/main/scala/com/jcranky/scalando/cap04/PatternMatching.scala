@@ -54,4 +54,17 @@ object PatternMatching extends App {
     case _ => false
   }
   println(teste2)
+
+  // capturando o valor recebido no case default
+  foto.copy(owner = "vic") match {
+    case Foto(_, "jcranky", _, _) => println("foto do jcranky")
+    case f => println(s"Uma outra foto: $f")
+  }
+
+  // tentando capturar o valor recebido no case default com letra maiúscula
+  val F = foto.copy(id = 9999)
+  foto.copy(owner = "vic") match {
+    case Foto(_, "jcranky", _, _) => println("foto do jcranky")
+    case F => println(s"Uma outra foto: $F")
+  }
 }
