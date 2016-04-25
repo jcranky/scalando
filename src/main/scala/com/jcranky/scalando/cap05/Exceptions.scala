@@ -18,6 +18,8 @@ object Exceptions extends App {
   } catch {
     case e: IOException => println("exceção de IO ao tentar buscar fotos")
     case e: Exception => println("exceção indefinida ao tentar buscar fotos")
+
+    // emite warning pois estamos capturando todas os erros possíveis "sem querer"
     case _ => println("alguma outra exceção")
   }
 
