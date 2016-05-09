@@ -20,4 +20,8 @@ object Tuplas extends App {
 
   println(s"id: $id2")
   println(s"title: $title2")
+
+  dadosFoto4 match {
+    case (id3, title3) => println(s"id: $id3 - title: $title3")
+  }
 }
