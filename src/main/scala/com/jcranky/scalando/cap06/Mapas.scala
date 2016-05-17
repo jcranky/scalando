@@ -16,4 +16,14 @@ object Mapas extends App {
   val metodoBusca = services("busca")
   val metodoBuscaOpt = services.get("busca")
 
+  val metodoBuscaPadrao = services.getOrElse("busca", "método padrão")
+
+  val novosServices = services + ("untagged" -> "flickr.photos.getUntagged")
+  println(novosServices)
+
+  val menosServices = services - "busca"
+  println(menosServices)
+
+  val servicesAtualizados = services.updated("busca", "flickr.photos.newSearch")
+  println(servicesAtualizados)
 }
