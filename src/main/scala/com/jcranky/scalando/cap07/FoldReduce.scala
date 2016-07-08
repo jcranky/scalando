@@ -2,8 +2,7 @@ package com.jcranky.scalando.cap07
 
 object FoldReduce extends App {
 
-  case class Foto(id: String, owner: String, server: Int,
-                  title: String, tags: Option[List[String]])
+  case class Foto(id: String, owner: String, server: Int, title: String, tags: Option[List[String]])
 
   val numeros = List(1, 2, 3, 4, 5)
   val soma = numeros.reduceLeft((acumulado, x) => acumulado + x)
