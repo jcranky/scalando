@@ -7,6 +7,8 @@ object ForComprehensions extends App {
   val caller = new FlickrCaller()
   val tags = Set("scala", "java", "jvm")
 
+  // foreachs
+
   tags.foreach { tag =>
     val fotos = caller.buscaFotos(tag)
     fotos foreach println
@@ -16,4 +18,16 @@ object ForComprehensions extends App {
     tag <- tags
     foto <- caller.buscaFotos(tag)
   } println (foto)
+
+  // maps e flatMaps
+
+  val fotosMapeadas = tags.flatMap(tag => caller.buscaFotos(tag).map(_.title))
+  fotosMapeadas foreach println
+
+  val fotosMapeadasFor = for {
+    tag <- tags
+    foto <- caller.buscaFotos(tag)
+  } yield foto.title
+  fotosMapeadasFor foreach println
+
 }
