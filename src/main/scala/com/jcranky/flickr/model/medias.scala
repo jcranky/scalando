@@ -1,4 +1,4 @@
-package com.jcranky.model
+package com.jcranky.flickr.model
 
 sealed trait Media {
   def id: Int
