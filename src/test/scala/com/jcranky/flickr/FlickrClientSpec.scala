@@ -14,4 +14,10 @@ class FlickrClientSpec extends Specification {
       FlickrClient.fromConfig(ConfigFactory.load("wrong.conf")) should throwAn[ConfigException]
     }
   }
+
+  "FlickrClient.buscaFotos" should {
+    "ask the httpclient for the photos and pass the response to the response parser" in {
+      pending
+    }
+  }
 }
