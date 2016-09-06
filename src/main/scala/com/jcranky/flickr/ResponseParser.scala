@@ -1,15 +1,17 @@
 package com.jcranky.flickr
 
 import com.jcranky.flickr.model.Foto
+import com.typesafe.config.Config
 
 sealed trait ResponseParser {
   def parse(str: String): Seq[Foto]
 }
+// TODO: criar um fromConfig no object ResponseParser que usa uma config para escolher Xml vs. Json parsing
 
-final class XmlParser extends ResponseParser {
+final class XmlFlickrParser extends ResponseParser {
   override def parse(str: String): Seq[Foto] = ???
 }
 
-object XmlParser {
-  def fromConfig(): XmlParser = new XmlParser()
+object XmlFlickrParser {
+  def fromConfig(config: Config): XmlFlickrParser = new XmlFlickrParser()
 }

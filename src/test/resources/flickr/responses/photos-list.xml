@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+    <photos page="1" pages="645" perpage="100" total="64461">
+        <photo id="29195658220" owner="28437914@N03" secret="cfe85ac898" server="8457" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195655410" owner="28437914@N03" secret="c4e6935947" server="8353" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195651850" owner="28437914@N03" secret="51449e97fc" server="8845" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195648660" owner="28437914@N03" secret="2529785ac8" server="8537" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="28862292093" owner="28437914@N03" secret="0097cc7e69" server="8521" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195634910" owner="28437914@N03" secret="a4959f2252" server="8009" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195632880" owner="28437914@N03" secret="ac48c82796" server="8289" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195630990" owner="28437914@N03" secret="e8077623c9" server="8300" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195629640" owner="28437914@N03" secret="0b5dcba3b7" server="7536" farm="8" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195627610" owner="28437914@N03" secret="cbd39378ef" server="7561" farm="8" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195624830" owner="28437914@N03" secret="2e4182f583" server="8283" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="28862264913" owner="28437914@N03" secret="20b5061be3" server="8830" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="28862261533" owner="28437914@N03" secret="b847eb1e9f" server="8426" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="28862258423" owner="28437914@N03" secret="342002b429" server="8438" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195617710" owner="28437914@N03" secret="30857f493b" server="7461" farm="8" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195614540" owner="28437914@N03" secret="08b335036e" server="8537" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195611040" owner="28437914@N03" secret="173b37d510" server="8371" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195605970" owner="28437914@N03" secret="9607915a90" server="8538" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+        <photo id="29195600910" owner="28437914@N03" secret="7c21f55703" server="8197" farm="9" title="MITO_SettembreMusica2016_Inaugurazione_Milano_high" ispublic="1" isfriend="0" isfamily="0" />
+    </photos>
+</rsp>
