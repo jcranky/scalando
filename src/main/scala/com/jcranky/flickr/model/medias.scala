@@ -1,8 +1,17 @@
 package com.jcranky.flickr.model
 
+// TODO: check the field type with the flickr documentation
 sealed trait Media {
-  def id: Int
+  def id: String
+  def owner: String
+  def secret: String
+  def server: String
+  def farm: String
+  def title: String
+  def ispublic: String
+  def isfriend: String
+  def isfamily: String
 }
 
-case class Foto(id: Int)
-case class Video(id: Int)
+final case class Foto(id: String) extends Media
+final case class Video(id: String) extends Media

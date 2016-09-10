@@ -9,7 +9,7 @@ sealed trait ResponseParser {
 // TODO: criar um fromConfig no object ResponseParser que usa uma config para escolher Xml vs. Json parsing
 
 final class XmlFlickrParser extends ResponseParser {
-  override def parse(str: String): Seq[Foto] = ???
+  override def parse(str: String): Seq[Foto] = Nil
 }
 
 object XmlFlickrParser {
