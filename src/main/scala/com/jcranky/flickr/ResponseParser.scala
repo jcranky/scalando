@@ -15,7 +15,7 @@ sealed trait ResponseParser {
 final class XmlFlickrParser extends ResponseParser {
   import ResponseParser._
 
-  // TOOD: proper erro handling in the parsing below
+  // TOOD: proper error handling in the parsing below
   override def parse(xmlStr: String): Seq[Foto] =
     (XML.loadString(xmlStr) \\ "photo").map { photoXml =>
       Foto(
