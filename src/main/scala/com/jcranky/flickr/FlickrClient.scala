@@ -8,17 +8,11 @@ class FlickrClient(apiKey: String, baseUrl: String, httpClient: HttpClient, resp
 
   // TODO: usar Either para tratar error e evitar precisar lançar excessões ....
   def buscaFotos(tags: List[String]): Seq[Foto] = {
-    //val url = s"$baseUrl?method=searchMethod&api_key=$apiKey&tags=$tags"
+    val url = s"$baseUrl?method=$searchMethod&api_key=$apiKey&tags=${tags.mkString(",")}"
 
-    //usar o HttpClient ao invés da chamada direta abaixo
-    //scala.io.Source.fromURL(url).getLines().foreach(println)
+    val response = httpClient.get(url)
 
-    // usar algum response parsear aqui, para retornar a lista de fotos
-
-//    val url = s"https://api.flickr.com/services/rest/?method=$searchMethod&api_key=$apiKey&tags=${tags.mkString(",")}"
-//    scala.io.Source.fromURL(url).getLines().foreach(println)
-
-    ???
+    responseParser.parse(response)
   }
 }
 

@@ -27,16 +27,16 @@ final class XmlFlickrParser extends ResponseParser {
         (photoXml \ "@server").text,
         (photoXml \ "@farm").text.toInt,
         (photoXml \ "@title").text,
-        calcBoolean((photoXml \ "@ispublic").text),
-        calcBoolean((photoXml \ "@isfriend").text),
-        calcBoolean((photoXml \ "@isfamily").text)
+        flickrBoolean((photoXml \ "@ispublic").text),
+        flickrBoolean((photoXml \ "@isfriend").text),
+        flickrBoolean((photoXml \ "@isfamily").text)
       )
     }
 }
 
 object XmlFlickrParser {
   // TODO: write a test for this guy
-  def calcBoolean(rawAttribute: String): Boolean =
+  def flickrBoolean(rawAttribute: String): Boolean =
     rawAttribute.toInt match {
       case 1 => true
       case _ => false

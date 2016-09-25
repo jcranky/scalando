@@ -1,6 +1,13 @@
 package com.jcranky.flickr
 
-class HttpClient
+/**
+  * A very simple Http client, that only do GET requests.
+  */
+class HttpClient {
+  // TODO: change this to return a Either[SomeError, Response], with response code and body
+  def get(url: String): String =
+    scala.io.Source.fromURL(url).getLines().mkString("\n")
+}
 
 object HttpClient {
   def fromConfig(): HttpClient = new HttpClient()
