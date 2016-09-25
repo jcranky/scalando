@@ -11,7 +11,7 @@ class XmlFlickrParserSpec extends Specification {
 
   "the response parser" should {
     "get a list of photos" in {
-      val parser = XmlFlickrParser.fromConfig(config)
+      val parser = new XmlFlickrParser()
       val response = Source.fromFile("src/test/resources/flickr/responses/photos-list.xml").getLines().mkString("\n")
 
       val parsed = parser.parse(response)

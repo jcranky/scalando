@@ -9,13 +9,11 @@ sealed trait ResponseParser {
   def parse(str: String): Seq[Foto]
 }
 
-// TODO: create a 'fromConfig' in the object ResponseParser that uses config information to choose Xml vs. Json parsing
 // TODO: model error codes (https://www.flickr.com/services/api/flickr.photos.search.html)
 // TODO: probably should have generic Response models, to be used by the specific parser's implementations
 
 final class XmlFlickrParser extends ResponseParser {
-
-  import XmlFlickrParser._
+  import ResponseParser._
 
   // TOOD: proper erro handling in the parsing below
   override def parse(xmlStr: String): Seq[Foto] =
@@ -34,7 +32,14 @@ final class XmlFlickrParser extends ResponseParser {
     }
 }
 
-object XmlFlickrParser {
+final class JsonFlickrParser extends ResponseParser {
+  /**
+    * Implementing this is left as an exercise for the reader.
+    */
+  override def parse(str: String): Seq[Foto] = ???
+}
+
+object ResponseParser {
   // TODO: write a test for this guy
   def flickrBoolean(rawAttribute: String): Boolean =
     rawAttribute.toInt match {
@@ -42,5 +47,13 @@ object XmlFlickrParser {
       case _ => false
     }
 
-  def fromConfig(config: Config): XmlFlickrParser = new XmlFlickrParser()
+  def fromConfig(config: Config): ResponseParser = {
+    val parser = config.getString("flickr.api.parser")
+    parser match {
+      case "xml" => new XmlFlickrParser()
+      case "json" => new JsonFlickrParser()
+      // the config could be wrongly set by the user, so we default here to use the xml parser
+      case _ => new XmlFlickrParser()
+    }
+  }
 }

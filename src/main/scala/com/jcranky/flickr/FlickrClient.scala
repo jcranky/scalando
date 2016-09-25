@@ -23,6 +23,6 @@ object FlickrClient {
     val apiKey = config.getString("flickr.api.key")
     val baseUrl = config.getString("flickr.api.baseurl")
 
-    new FlickrClient(apiKey, baseUrl, HttpClient.fromConfig(), XmlFlickrParser.fromConfig(config))
+    new FlickrClient(apiKey, baseUrl, HttpClient.fromConfig(), ResponseParser.fromConfig(config))
   }
 }
