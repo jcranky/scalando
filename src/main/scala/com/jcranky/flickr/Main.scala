@@ -6,5 +6,8 @@ object Main extends App {
   val config = ConfigFactory.load()
   val flickrClient = FlickrClient.fromConfig(config)
 
-  flickrClient.buscaFotos(List("scala")).foreach(println)
+  flickrClient.buscaFotos(List("scala")) match {
+    case Right(fotos) => fotos.foreach(println)
+    case Left(err) => println(s"Error getting fotos: ${err.msg}")
+  }
 }
