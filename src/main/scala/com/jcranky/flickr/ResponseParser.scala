@@ -40,7 +40,6 @@ final class JsonFlickrParser extends ResponseParser {
 }
 
 object ResponseParser {
-  // TODO: write a test for this guy
   def flickrBoolean(rawAttribute: String): Boolean =
     rawAttribute.toInt match {
       case 1 => true
