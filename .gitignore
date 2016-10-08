@@ -17,3 +17,4 @@ project/plugins/project/
 .worksheet
 
 .idea/
+/src/main/resources/secret.conf
