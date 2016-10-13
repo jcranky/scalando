@@ -15,7 +15,7 @@ class FlickrClientSpec extends Specification with Mockito {
     }
 
     "fail if some configuration is missing" in {
-      FlickrClient.fromConfig(ConfigFactory.load("wrong.conf")) should throwAn[ConfigException]
+      FlickrClient.fromConfig(ConfigFactory.load("acre.conf")) should throwAn[ConfigException]
     }
   }
 
