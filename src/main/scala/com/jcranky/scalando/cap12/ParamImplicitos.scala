@@ -21,7 +21,7 @@ object ParamImplicitos extends App {
   }
 
 
-  implicit val parser = new XMLParser()
+  implicit val parser: ResponseParser = new XMLParser()
 
   val fotos = buscaFotosComImplicits(None)
   fotos foreach println

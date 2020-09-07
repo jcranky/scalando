@@ -55,7 +55,7 @@ object Map extends App {
     val tagText = tag.map("&tags=" + _).getOrElse("")
 
     val url = s"http://api.flickr.com/services/rest/?method=$method&api_key=$apiKey$tagText"
-    Source.fromURL(url).getLines.foreach(println)
+    Source.fromURL(url).getLines().foreach(println)
   }
 
 }

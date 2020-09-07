@@ -12,7 +12,7 @@ object Filter extends App {
   // lança um NotImplementedError
   // val p: (Foto) => Boolean = ???
 
-  def fotosDoJCranky(foto: Foto) = foto.owner == "jcranky"
+  def fotosDoJCranky(foto: Foto): Boolean = foto.owner == "jcranky"
   val p: (Foto) => Boolean = fotosDoJCranky
 
   fotos.filter(fotosDoJCranky)

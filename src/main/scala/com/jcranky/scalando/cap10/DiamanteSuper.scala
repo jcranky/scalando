@@ -8,14 +8,14 @@ object DiamanteSuper extends App {
   // remova os "abstract" abaixo se quiser ver a mensagem de erro relativa a overrides abstratos
 
   trait LogArquivo extends LogBase {
-    abstract override def log(msg: String) = {
+    abstract override def log(msg: String): Unit = {
       super.log(msg)
       println(s"logando $msg no arquivo")
     }
   }
 
   trait LogConsole extends LogBase {
-    abstract override def log(msg: String) = {
+    abstract override def log(msg: String): Unit = {
       super.log(msg)
       println(s"logando $msg no console")
     }
@@ -24,6 +24,8 @@ object DiamanteSuper extends App {
   class EmptyLogger extends LogBase {
     override def log(msg: String): Unit = {}
   }
+
+//  val logger2 = new LogConsole with LogArquivo
 
   val logger = new EmptyLogger with LogConsole with LogArquivo
   logger.log("Olá Scaladores!")

@@ -28,16 +28,16 @@ object ContaFotos extends App {
 
   // dados fixos apenas para teste, parseamento do XML é feito em um capítulo futuro
   def parseiaResultado(resultado: String): List[Foto] = List(
-    new Foto(25046413926l, "119192561@N02", "Scala", 2),
-    new Foto(24702428649l, "130046925@N04", "NY", 2),
-    new Foto(24305307114l, "76999786@N02", "Future starts slow", 2),
-    new Foto(25029759906l, "124408581@N06", "Elizabeth Dress &amp; Shoes_003", 2),
-    new Foto(24938009862l, "124408581@N06", "Elizabeth Dress &amp; Shoes_004", 2),
-    new Foto(24328322599l, "124408581@N06", "Lonely Robot London Scala 201215", 2)
+    new Foto(25046413926L, "119192561@N02", "Scala", 2),
+    new Foto(24702428649L, "130046925@N04", "NY", 2),
+    new Foto(24305307114L, "76999786@N02", "Future starts slow", 2),
+    new Foto(25029759906L, "124408581@N06", "Elizabeth Dress &amp; Shoes_003", 2),
+    new Foto(24938009862L, "124408581@N06", "Elizabeth Dress &amp; Shoes_004", 2),
+    new Foto(24328322599L, "124408581@N06", "Lonely Robot London Scala 201215", 7)
   )
 
   val fotos = parseiaResultado(resultadoServico)
-  val countFotosFarm7 = fotos.count(foto => foto.farm == 2)
+  val countFotosFarm2 = fotos.count(foto => foto.farm == 2)
 
-  println(countFotosFarm7)
+  println(s"count: $countFotosFarm2")
 }

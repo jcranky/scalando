@@ -19,7 +19,7 @@ object ForComprehensions extends App {
   } println (foto)
 
   // maps e flatMaps
-  println
+  println()
   println("-" * 50)
 
   val fotosMapeadas = tags.flatMap(tag => caller.buscaFotos(tag).map(_.title))
@@ -34,7 +34,7 @@ object ForComprehensions extends App {
   fotosMapeadasFor foreach println
 
   // filter
-  println
+  println()
   println("-" * 50)
 
   val nomesFiltrados = tags.filter(_.startsWith("j"))

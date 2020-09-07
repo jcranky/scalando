@@ -21,6 +21,7 @@ object SomaFotos extends App {
     override def toLong(x: Foto): Long = x.id
     override def times(x: Foto, y: Foto): Foto = x
     override def compare(x: Foto, y: Foto): Int = 0
+    override def parseString(str: String): Option[Foto] = None
   }
 
   val fotos = List(

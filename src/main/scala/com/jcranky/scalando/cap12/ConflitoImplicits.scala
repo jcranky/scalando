@@ -7,5 +7,5 @@ object ConflitoImplicits extends App {
   implicit def newPrintableFoto(foto: Foto): PrintableFoto = new PrintableFoto(foto)
 
   // descomente para ver o erro de compilação com implicits ambíguos
-  // Foto("foto1", "jcranky", 1234, "Foto 1", None).print
+//   Foto(12, "jcranky", 1234, "Foto 1").print
 }

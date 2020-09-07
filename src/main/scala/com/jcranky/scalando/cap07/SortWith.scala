@@ -15,7 +15,7 @@ object SortWith extends App {
 
   println("-" * 50)
 
-  def ehMaior(x: Int, y: Int) = x < y
+  def ehMaior(x: Int, y: Int): Boolean = x < y
 
   val numeros2 = List(1,3,5,2,4)
   val ordenada2 = numeros sortWith ehMaior
