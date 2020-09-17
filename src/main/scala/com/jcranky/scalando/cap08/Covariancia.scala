@@ -9,8 +9,8 @@ object Covariancia extends App {
     new FotoDetalhada(2, "jcranky", 321, "scalax2", Set.empty, "detalhes da foto")
   )
 
-  def printFotos(fotos: List[Foto]) = fotos foreach println
+  def printaFotos(fotos: List[Foto]): Unit = fotos foreach println
 
-  printFotos(fotos)
-  printFotos(fotosDetalhadas)
+  printaFotos(fotos)
+  printaFotos(fotosDetalhadas)
 }
